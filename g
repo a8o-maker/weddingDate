@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>손규수 & 문세화 모바일 청첩장</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'batang': ['"Gowun Batang"', 'serif'],
+                        'sans': ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Gowun Batang', 'Montserrat', sans-serif;
+            background-color: #030712;
+            color: #f8fafc;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #030712; }
+        ::-webkit-scrollbar-thumb { background: #0d9488; border-radius: 3px; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .sea-glass {
+            background: rgba(2, 44, 34, 0.45);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(13, 148, 136, 0.3);
+        }
+        @keyframes floatBubble {
+            0% { transform: translateY(0px) scale(1); opacity: 0.3; }
+            50% { transform: translateY(-300px) scale(1.2); opacity: 0.8; }
+            100% { transform: translateY(-600px) scale(0.8); opacity: 0; }
+        }
+        .bubble {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatBubble 8s infinite linear;
+        }
+    </style>
+</head>
+<body class="relative selection:bg-teal-500 selection:text-white">
+
+    <!-- BGM Audio -->
+    <audio id="bgm" loop>
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf756.mp3?filename=cinematic-time-lapse-115672.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating BGM Button -->
+    <div class="fixed top-5 right-5 z-50">
+        <button id="bgm-btn" onclick="toggleBgm()" class="flex items-center gap-2 px-4 py-2 rounded-full glass-panel text-white text-xs tracking-wider shadow-lg hover:bg-white/20 transition-all duration-300">
+            <i id="bgm-icon" class="fa-solid fa-music text-teal-300 animate-spin"></i>
+            <span id="bgm-text">BGM ON</span>
+        </button>
+    </div>
+
+    <!-- MAIN CONTAINER -->
+    <main class="w-full max-w-md mx-auto relative shadow-2xl overflow-hidden">
+
+        <!-- 1. SF SKY AERIAL VIEW -->
+        <section class="relative min-h-screen flex flex-col justify-between items-center text-center px-6 py-16 bg-gradient-to-b from-[#030712] via-[#0f172a] to-[#1e293b]">
+            <div class="absolute inset-0 opacity-30 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-indigo-500 via-transparent to-transparent"></div>
+            
+            <div class="relative z-10 pt-8">
+                <span class="text-xs uppercase tracking-[0.3em] text-indigo-300 font-sans">SAN FRANCISCO ✈️ BUSAN</span>
+                <h1 class="text-3xl font-bold tracking-wider mt-3 text-white">손규수 & 문세화</h1>
+                <p class="text-xs text-indigo-200 mt-2 font-light">하늘 위에서 내려다본 특별한 인연</p>
+            </div>
+
+            <div class="relative z-10 my-8 w-full max-w-xs">
+                <div class="rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl border border-indigo-500/30">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Aerial SF Sky" class="w-full h-80 object-cover rounded-xl filter brightness-90 contrast-110">
+                    <div class="absolute bottom-4 left-0 right-0 text-center">
+                        <span class="bg-black/60 backdrop-blur-md px-4 py-1.5 rounded-full text-[11px] tracking-widest text-indigo-200 border border-indigo-400/20">
+                            SAN FRANCISCO SKY
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative z-10 pb-6">
+                <p class="text-sm text-gray-300 leading-relaxed font-light">
+                    샌프란시스코의 드넓은 하늘에서 시작된 만남,<br>부산의 맑고 깊은 바다 속으로 축복의 여행을 떠납니다.
+                </p>
+                <div class="mt-6 animate-bounce text-indigo-400">
+                    <i class="fa-solid fa-chevron-down text-lg"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. INVITATION -->
+        <section class="relative py-24 px-6 bg-gradient-to-b from-[#1e293b] via-[#0d233a] to-[#022c22] text-center">
+            <div class="max-w-sm mx-auto glass-panel p-8 rounded-3xl relative overflow-hidden shadow-2xl border border-teal-500/20">
+                <span class="text-xs uppercase tracking-[0.3em] text-teal-300 font-sans">Invitation</span>
+                <h2 class="text-2xl font-bold mt-3 mb-6 text-white">소중한 분들을 모십니다</h2>
+                
+                <p class="text-sm leading-loose text-gray-200 font-light mb-8">
+                    기계공학적 정교함과 다큐멘터리의 깊은 시선으로<br>
+                    함께 걸어갈 인생의 첫 장을 펼칩니다.<br><br>
+                    두 사람이 손을 잡고 에메랄드빛 바다 속으로<br>
+                    뛰어드는 스노클링처럼 청량한 날,<br>
+                    따뜻한 축복으로 함께해 주세요.
+                </p>
+
+                <div class="space-y-3 text-sm border-t border-b border-white/10 py-6 text-gray-300">
+                    <div class="flex justify-center items-center gap-2">
+                        <span class="font-medium text-white">손영길 · 김정숙</span>
+                        <span class="text-xs text-teal-400">의 아들</span>
+                        <span class="font-semibold text-teal-200">규수</span>
+                    </div>
+                    <div class="flex justify-center items-center gap-2">
+                        <span class="font-medium text-white">문재호 · 박순희</span>
+                        <span class="text-xs text-teal-400">의 딸</span>
+                        <span class="font-semibold text-teal-200">세화</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. UNDERWATER SNORKELING JOURNEY -->
+        <section class="relative min-h-screen py-24 px-6 bg-gradient-to-b from-[#022c22] via-[#043d31] to-[#01140e] text-center overflow-hidden">
+            <div class="bubble w-4 h-4 left-10 bottom-0" style="animation-duration: 7s;"></div>
+            <div class="bubble w-6 h-6 left-1/2 bottom-0" style="animation-duration: 9s; animation-delay: 1s;"></div>
+            <div class="bubble w-3 h-3 right-12 bottom-0" style="animation-duration: 6s; animation-delay: 2s;"></div>
+
+            <div class="relative z-10">
+                <span class="text-xs uppercase tracking-[0.3em] text-teal-300 font-sans">🌊 SNORKELING IN BUSAN</span>
+                <h2 class="text-2xl font-bold mt-3 mb-2 text-white">깊고 청량한 우리들의 바다</h2>
+                <p class="text-xs text-teal-200/80 mb-10">아래로 내릴수록 투명한 부산 바다 속으로 빠져듭니다.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-3 gap-3 relative z-10 mb-12">
+                <div class="aspect-[3/4] rounded-xl overflow-hidden sea-glass p-1 border border-teal-500/30">
+                    <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=500&q=80" alt="Ocean 1" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="aspect-[3/4] rounded-xl overflow-hidden sea-glass p-1 border border-teal-500/30">
+                    <img src="https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=500&q=80" alt="Ocean 2" class="w-full h-full object-cover rounded-lg">
+                </div>
+                <div class="aspect-[3/4] rounded-xl overflow-hidden sea-glass p-1 border border-teal-500/30">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=500&q=80" alt="Ocean 3" class="w-full h-full object-cover rounded-lg">
+                </div>
+            </div>
+
+            <!-- Calendar & D-Day -->
+            <div class="sea-glass p-6 rounded-3xl relative z-10 text-left mb-12 border border-teal-500/30 shadow-xl">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-lg font-bold text-teal-100"><i class="fa-regular fa-calendar-days mr-2 text-teal-400"></i> 예식 일시</h3>
+                    <span id="d-day" class="text-xs bg-teal-500/20 text-teal-300 px-3 py-1 rounded-full font-sans border border-teal-500/40">D-Day</span>
+                </div>
+                <div class="text-center py-2 text-teal-200 text-sm font-medium border-t border-b border-teal-500/20 my-3">
+                    2026년 10월 25일 일요일 낮 12시 30분
+                </div>
+            </div>
+
+            <!-- Location -->
+            <div class="sea-glass p-6 rounded-3xl relative z-10 text-left mb-12 border border-teal-500/30 shadow-xl">
+                <h3 class="text-lg font-bold text-teal-100 mb-2"><i class="fa-solid fa-location-dot mr-2 text-teal-400"></i> 오시는 길</h3>
+                <p class="text-sm font-semibold text-white">양산 더 지펠리체 5층 팰리스홀</p>
+                <p class="text-xs text-gray-300 mt-1 mb-4">경남 양산시 동면 남양산로 (지펠리체 웨딩)</p>
+
+                <div class="grid grid-cols-3 gap-2">
+                    <a href="https://map.naver.com" target="_blank" class="py-2.5 bg-teal-600/80 hover:bg-teal-600 text-white rounded-xl text-center text-xs font-medium transition">네이버 지도</a>
+                    <a href="https://map.kakao.com" target="_blank" class="py-2.5 bg-yellow-500/90 hover:bg-yellow-500 text-gray-900 rounded-xl text-center text-xs font-semibold transition">카카오내비</a>
+                    <a href="https://tmap.co.kr" target="_blank" class="py-2.5 bg-blue-600/80 hover:bg-blue-600 text-white rounded-xl text-center text-xs font-medium transition">티맵</a>
+                </div>
+            </div>
+
+            <!-- Account Numbers -->
+            <div class="sea-glass p-6 rounded-3xl relative z-10 text-left mb-12 border border-teal-500/30 shadow-xl">
+                <h3 class="text-lg font-bold text-teal-100 mb-4"><i class="fa-solid fa-wallet mr-2 text-teal-400"></i> 마음 전하실 곳</h3>
+                
+                <div class="space-y-4">
+                    <div class="p-4 rounded-2xl bg-teal-950/50 border border-teal-500/20">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs text-teal-300 font-medium">신랑 측 계좌</span>
+                            <button onclick="copyAccount('국민은행 123456-04-123456 (손규수)')" class="text-xs bg-teal-500/20 hover:bg-teal-500/40 text-teal-200 px-2.5 py-1 rounded-md transition border border-teal-500/30">복사하기</button>
+                        </div>
+                        <p class="text-xs text-white font-sans">국민은행 123456-04-123456</p>
+                        <p class="text-xs text-gray-300 mt-0.5">예금주: 손규수</p>
+                    </div>
+
+                    <div class="p-4 rounded-2xl bg-teal-950/50 border border-teal-500/20">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs text-teal-300 font-medium">신부 측 계좌</span>
+                            <button onclick="copyAccount('경남은행 789012-52-654321 (문세화)')" class="text-xs bg-teal-500/20 hover:bg-teal-500/40 text-teal-200 px-2.5 py-1 rounded-md transition border border-teal-500/30">복사하기</button>
+                        </div>
+                        <p class="text-xs text-white font-sans">경남은행 789012-52-654321</p>
+                        <p class="text-xs text-gray-300 mt-0.5">예금주: 문세화</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Share -->
+            <div class="relative z-10 pb-12 text-center">
+                <button onclick="shareLink()" class="w-full py-3.5 rounded-2xl bg-gradient-to-r from-teal-600 to-emerald-600 text-white font-medium text-sm shadow-lg shadow-teal-900/50 hover:brightness-110 transition flex items-center justify-center gap-2 mb-4">
+                    <i class="fa-solid fa-share-nodes"></i> 청첩장 링크 공유하기
+                </button>
+                <p class="text-xs text-teal-300/60 font-sans tracking-widest mt-6">© 2026 GyuSoo & SeHwa Wedding</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        let isPlaying = false;
+        const bgm = document.getElementById('bgm');
+        const bgmBtn = document.getElementById('bgm-btn');
+        const bgmIcon = document.getElementById('bgm-icon');
+        const bgmText = document.getElementById('bgm-text');
+
+        function toggleBgm() {
+            if (isPlaying) {
+                bgm.pause();
+                isPlaying = false;
+                bgmIcon.className = "fa-solid fa-music text-gray-400";
+                bgmText.innerText = "BGM OFF";
+            } else {
+                bgm.play().then(() => {
+                    isPlaying = true;
+                    bgmIcon.className = "fa-solid fa-music text-teal-300 animate-spin";
+                    bgmText.innerText = "BGM ON";
+                }).catch(() => {});
+            }
+        }
+
+        function copyAccount(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('계좌번호가 복사되었습니다: ' + text);
+            });
+        }
+
+        function shareLink() {
+            if (navigator.share) {
+                navigator.share({
+                    title: '손규수 ❤ 문세화 모바일 청첩장',
+                    url: window.location.href,
+                }).catch(() => {});
+            } else {
+                navigator.clipboard.writeText(window.location.href);
+                alert('청첩장 링크가 클립보드에 복사되었습니다!');
+            }
+        }
+    </script>
+</body>
+</html>
+
